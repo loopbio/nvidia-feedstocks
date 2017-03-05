@@ -20,4 +20,4 @@ echo "
 #     https://developer.nvidia.com/cudnn
 #
 ###############################
-" > ${PREFIX}/.messages.txt
+" >> ${PREFIX}/.messages.txt

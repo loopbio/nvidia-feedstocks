@@ -20,4 +20,4 @@ echo "
 #     https://developer.nvidia.com/cuda-zone
 #
 ###############################
-" > ${PREFIX}/.messages.txt
+" >> ${PREFIX}/.messages.txt

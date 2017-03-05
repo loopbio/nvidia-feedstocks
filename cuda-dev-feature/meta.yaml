@@ -19,7 +19,7 @@ package:
   version: {{ cuda_version }}
 
 build:
-  number: 0
+  number: 1
   track_features:
     - cuda{{ cuda_version }}
     - cuda{{ cuda_version }}-dev
