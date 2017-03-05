@@ -1,0 +1,9 @@
+{% set cuda_version = "8.0" %}
+{% set cudnn_version = "5.1" %}
+
+{% block recipe %}{% endblock %}
+
+extra:
+  recipe-url: https://github.com/loopbio/nvidia-feedstocks
+  recipe-maintainers:
+    - sdvillal

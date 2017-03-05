@@ -7,8 +7,10 @@
 # track the same feature.
 #
 
+{% extends "base.yaml" %}
+{% block recipe %}
+
 {% set name = "cuda-feature" %}
-{% set cuda_version = "8.0" %}
 
 package:
   name: {{ name }}
@@ -23,7 +25,4 @@ about:
   home: https://developer.nvidia.com/cuda-zone
   summary: A parallel computing platform and programming model.
 
-extra:
-  recipe-url: https://github.com/loopbio/cuda-feature-feedstock
-  recipe-maintainers:
-    - sdvillal
+{% endblock %}

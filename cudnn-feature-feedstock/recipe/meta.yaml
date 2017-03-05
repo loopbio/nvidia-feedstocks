@@ -7,9 +7,10 @@
 # track the same feature.
 #
 
+{% extends "base.yaml" %}
+{% block recipe %}
+
 {% set name = "cudnn-feature" %}
-{% set cudnn_version = "5.1" %}
-{% set cuda_version = "8.0" %}
 
 package:
   name: {{ name }}
@@ -30,3 +31,5 @@ extra:
   recipe-url: https://github.com/loopbio/cudnn-feature-feedstock
   recipe-maintainers:
     - sdvillal
+
+{% endblock %}
