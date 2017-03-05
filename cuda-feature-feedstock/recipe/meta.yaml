@@ -1,0 +1,29 @@
+#
+# A metapackage to declare that an environment tracks (has) the "CUDA" feature.
+#  - Tracks the cuda{version} feature.
+#  - Shows a message to the user.
+#
+# Installs nothing, that could be left to a CUDA package that would also
+# track the same feature.
+#
+
+{% set name = "cuda-feature" %}
+{% set cuda_version = "8.0" %}
+
+package:
+  name: {{ name }}
+  version: {{ cuda_version }}
+
+build:
+  number: 0
+  track_features:
+    - cuda{{ cuda_version }}
+
+about:
+  home: https://developer.nvidia.com/cuda-zone
+  summary: A parallel computing platform and programming model.
+
+extra:
+  recipe-url: https://github.com/loopbio/cuda-feature-feedstock
+  recipe-maintainers:
+    - sdvillal
