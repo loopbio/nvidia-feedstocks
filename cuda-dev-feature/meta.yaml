@@ -1,0 +1,31 @@
+#
+# A metapackage to declare that an environment tracks (has) the "CUDA-DEV" feature.
+# That is, we have nvcc available.
+#  - Tracks the cuda{version} feature.
+#  - Tracks the cuda{version}-dev feature.
+#  - Shows a message to the user.
+#
+# Installs nothing, that could be left to a cuda-dev package that would also
+# track the same features.
+#
+
+{% extends "base.yaml" %}
+{% block recipe %}
+
+{% set name = "cuda-dev-feature" %}
+
+package:
+  name: {{ name }}
+  version: {{ cuda_version }}
+
+build:
+  number: 0
+  track_features:
+    - cuda{{ cuda_version }}
+    - cuda{{ cuda_version }}-dev
+
+about:
+  home: https://developer.nvidia.com/cuda-zone
+  summary: A parallel computing platform and programming model.
+
+{% endblock %}
