@@ -19,9 +19,11 @@ package:
   version: {{ cuda_version }}
 
 build:
-  number: 2
+  number: 3
   track_features:
-    - cuda{{ cuda_version }}
+    # Uncomment this as soon as this conda bug is fixed
+    #   https://github.com/conda/conda/issues/3733
+    # - cuda{{ cuda_version }}
     - cuda{{ cuda_version }}dev
 
 about:
